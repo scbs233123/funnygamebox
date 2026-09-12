@@ -141,19 +141,20 @@
       box-shadow: 0 4px 10px rgba(255, 71, 87, 0.15);
     }
 
-    /* 极简白底卡片 */
+    /* 居中卡片样式 */
     .about-card {
       background: #ffffff;
-      padding: 30px;
+      padding: 40px 30px;
       border-radius: 10px;
       border: 1px solid #eaeaea;
       margin-bottom: 25px;
+      text-align: center; /* 整体居中 */
     }
 
     .about-card h2 {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       color: #222;
-      margin: 18px 0 8px 0;
+      margin: 20px 0 10px 0;
     }
 
     .about-card h2:first-child {
@@ -167,8 +168,11 @@
       margin-bottom: 12px;
     }
 
+    /* 列表水平居中，内部文本左对齐保持阅读顺畅 */
     .about-card ul {
-      margin: 10px 0 15px 20px;
+      display: inline-block;
+      text-align: left;
+      margin: 10px 0 15px 0;
       color: #555;
       font-size: 0.95rem;
     }
@@ -235,7 +239,7 @@
       </a>
     </nav>
 
-    <!-- 极简自然纯文字排版 -->
+    <!-- 居中内容区 -->
     <main class="about-card">
       <h2>About Funny Game Box</h2>
       <p>Welcome to <strong>Funny Game Box</strong>, your go-to platform for playing high-quality free online HTML5 browser games and unblocked mini games.</p>
