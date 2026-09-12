@@ -38,7 +38,6 @@
       padding: 15px 0; 
     }
 
-    /* 视障/SEO 专属 H1 隐藏样式 */
     .visually-hidden {
       position: absolute;
       width: 1px;
@@ -111,7 +110,6 @@
     }
     .nav-links a:hover { color: #ff4757; }
 
-    /* 游戏分类栏样式 */
     .category-bar {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -143,7 +141,7 @@
       box-shadow: 0 4px 10px rgba(255, 71, 87, 0.15);
     }
 
-    /* About 主体卡片区 */
+    /* 优化后的卡片与特色列表样式 */
     .about-card {
       background: #ffffff;
       padding: 30px;
@@ -154,9 +152,9 @@
     }
 
     .about-card h2 {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       color: #222;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     .about-card p {
@@ -166,9 +164,41 @@
       line-height: 1.7;
     }
 
-    .about-card p:last-child {
-      margin-bottom: 0;
+    .feature-list {
+      list-style: none;
+      margin: 15px 0 25px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 12px;
     }
+
+    .feature-item {
+      background: #fdfbf7;
+      border: 1px solid #f0ede4;
+      padding: 12px 15px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .category-links {
+      margin-top: 20px;
+      border-top: 1px dashed #eee;
+      padding-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    .category-links a {
+      color: #ff4757;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 4px;
+    }
+
+    .category-links a:hover { text-decoration: underline; }
 
     footer { 
       text-align: center; 
@@ -209,7 +239,7 @@
       </nav>
     </header>
 
-    <!-- 游戏分类导航栏 -->
+    <!-- 分类导航栏 -->
     <nav class="category-bar">
       <a href="/" class="category-item">
         <span>🎯</span> Trending Games
@@ -228,12 +258,29 @@
       </a>
     </nav>
 
-    <!-- 关于我们卡片 -->
+    <!-- 丰富后的 About 内容区 -->
     <main class="about-card">
-      <h2>About Funny Game Box</h2>
-      <p>Welcome to <strong>Funny Game Box</strong>, your ultimate destination for playing the best free online games and unblocked mini games! We offer a wide variety of HTML5 browser games including action, driving, puzzle, shooting, and 2-player games that you can play instantly on desktop, tablet, or mobile devices.</p>
-      <p>All games on Funny Game Box are 100% free with no downloads, installs, or registration required. Bookmark our site and enjoy seamless gaming anytime, anywhere!</p>
-      <p>If you have any questions, feedback, or business inquiries, feel free to contact us via email at <strong>support@funnygamebox.com</strong>.</p>
+      <h2>Welcome to Funny Game Box</h2>
+      <p><strong>Funny Game Box</strong> is your ultimate destination for playing high-quality free online games and unblocked mini games directly in your browser!</p>
+
+      <ul class="feature-list">
+        <li class="feature-item"><span>🚀</span> <strong>No Downloads Required:</strong> Instant play on any device.</li>
+        <li class="feature-item"><span>💯</span> <strong>100% Free Forever:</strong> No registration, fees, or hidden costs.</li>
+        <li class="feature-item"><span>📱</span> <strong>Cross-Platform:</strong> Fully optimized for desktop, tablet, and mobile.</li>
+      </ul>
+
+      <h2>Our Mission</h2>
+      <p>We aim to bring fun and accessibility to players around the world. We continuously test and add new trending HTML5 browser games to ensure you always have fresh games to enjoy.</p>
+
+      <p>If you have any questions, feedback, or business inquiries, feel free to reach out at <strong>support@funnygamebox.com</strong>.</p>
+
+      <div class="category-links">
+        <strong>Explore Top Categories:</strong> 
+        <a href="/casual.html">Casual Games</a> | 
+        <a href="/driving.html">Driving Games</a> | 
+        <a href="/puzzle.html">Puzzle Games</a> | 
+        <a href="/action.html">Action Games</a>
+      </div>
     </main>
 
     <footer>
