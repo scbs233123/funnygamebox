@@ -141,64 +141,41 @@
       box-shadow: 0 4px 10px rgba(255, 71, 87, 0.15);
     }
 
-    /* 优化后的卡片与特色列表样式 */
+    /* 极简白底卡片 */
     .about-card {
       background: #ffffff;
       padding: 30px;
-      border-radius: 12px;
+      border-radius: 10px;
       border: 1px solid #eaeaea;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
       margin-bottom: 25px;
     }
 
     .about-card h2 {
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       color: #222;
-      margin-bottom: 12px;
+      margin: 18px 0 8px 0;
+    }
+
+    .about-card h2:first-child {
+      margin-top: 0;
     }
 
     .about-card p {
       font-size: 0.95rem;
       color: #555;
-      margin-bottom: 15px;
-      line-height: 1.7;
+      line-height: 1.6;
+      margin-bottom: 12px;
     }
 
-    .feature-list {
-      list-style: none;
-      margin: 15px 0 25px 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 12px;
+    .about-card ul {
+      margin: 10px 0 15px 20px;
+      color: #555;
+      font-size: 0.95rem;
     }
 
-    .feature-item {
-      background: #fdfbf7;
-      border: 1px solid #f0ede4;
-      padding: 12px 15px;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      color: #444;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    .about-card li {
+      margin-bottom: 6px;
     }
-
-    .category-links {
-      margin-top: 20px;
-      border-top: 1px dashed #eee;
-      padding-top: 15px;
-      font-size: 0.9rem;
-    }
-
-    .category-links a {
-      color: #ff4757;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 0 4px;
-    }
-
-    .category-links a:hover { text-decoration: underline; }
 
     footer { 
       text-align: center; 
@@ -239,7 +216,7 @@
       </nav>
     </header>
 
-    <!-- 分类导航栏 -->
+    <!-- 游戏分类栏 -->
     <nav class="category-bar">
       <a href="/" class="category-item">
         <span>🎯</span> Trending Games
@@ -258,29 +235,19 @@
       </a>
     </nav>
 
-    <!-- 丰富后的 About 内容区 -->
+    <!-- 极简自然纯文字排版 -->
     <main class="about-card">
-      <h2>Welcome to Funny Game Box</h2>
-      <p><strong>Funny Game Box</strong> is your ultimate destination for playing high-quality free online games and unblocked mini games directly in your browser!</p>
-
-      <ul class="feature-list">
-        <li class="feature-item"><span>🚀</span> <strong>No Downloads Required:</strong> Instant play on any device.</li>
-        <li class="feature-item"><span>💯</span> <strong>100% Free Forever:</strong> No registration, fees, or hidden costs.</li>
-        <li class="feature-item"><span>📱</span> <strong>Cross-Platform:</strong> Fully optimized for desktop, tablet, and mobile.</li>
+      <h2>About Funny Game Box</h2>
+      <p>Welcome to <strong>Funny Game Box</strong>, your go-to platform for playing high-quality free online HTML5 browser games and unblocked mini games.</p>
+      
+      <ul>
+        <li><strong>No Downloads Required:</strong> Play directly in your web browser with zero installation.</li>
+        <li><strong>100% Free:</strong> All games are free to play on desktop, tablet, and mobile devices.</li>
+        <li><strong>Rich Categories:</strong> Enjoy a diverse collection of action, driving, puzzle, and casual games.</li>
       </ul>
 
-      <h2>Our Mission</h2>
-      <p>We aim to bring fun and accessibility to players around the world. We continuously test and add new trending HTML5 browser games to ensure you always have fresh games to enjoy.</p>
-
-      <p>If you have any questions, feedback, or business inquiries, feel free to reach out at <strong>support@funnygamebox.com</strong>.</p>
-
-      <div class="category-links">
-        <strong>Explore Top Categories:</strong> 
-        <a href="/casual.html">Casual Games</a> | 
-        <a href="/driving.html">Driving Games</a> | 
-        <a href="/puzzle.html">Puzzle Games</a> | 
-        <a href="/action.html">Action Games</a>
-      </div>
+      <h2>Contact Us</h2>
+      <p>If you have any feedback, questions, or business inquiries, feel free to reach out to us at <strong>support@funnygamebox.com</strong>.</p>
     </main>
 
     <footer>
