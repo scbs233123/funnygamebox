@@ -2,28 +2,28 @@
 <html lang="en">
 <head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-26BKS5NW3H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-26BKS5NW3H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-26BKS5NW3H');
-</script>
+    gtag('config', 'G-26BKS5NW3H');
+  </script>
   
   <!-- 引入 jQuery（GameMonetize 视频脚本核心依赖） -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SNGPZK3CYM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SNGPZK3CYM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-SNGPZK3CYM');
-</script>
+    gtag('config', 'G-SNGPZK3CYM');
+  </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +33,7 @@
   <meta name="description" content="Play Haunted House Idle online for free! Manage and upgrade your spooky haunted mansion, scare visitors, collect soul currency, and expand your spooky empire in this addictive idle game.">
   <meta name="keywords" content="haunted house idle, idle games, spooky games, halloween games, free online games, unblocked games, browser games">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://y8games.top/games/haunted-house-idle.html">
+  <link rel="canonical" href="https://funnygamebox.com/games/haunted-house-idle.html">
 
   <!-- AdSense 广告代码脚本 -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7325130017318424" crossorigin="anonymous"></script>
@@ -65,29 +65,81 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px; 
+      margin-bottom: 15px; 
       padding-bottom: 10px;
       border-bottom: 1px solid #eaeaea;
+      flex-wrap: wrap;
+      gap: 10px;
     }
+
     header .logo { 
-      font-size: 1.8rem; 
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.7rem; 
       font-weight: 900; 
       color: #ff4757; 
       text-decoration: none; 
-      letter-spacing: 1px; 
+      letter-spacing: 0.5px; 
     }
+
+    header .logo .logo-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 36px;
+      background-color: #ff4757;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
     header .logo span { color: #ffa502; }
+
     header h1 { 
       font-size: 1.4rem; 
       font-weight: bold; 
       color: #333; 
     }
 
+    /* 分类导航栏 CSS 样式 */
+    .category-bar {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .category-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #ffffff;
+      border: 1px solid #eaeaea;
+      padding: 10px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+      transition: all 0.2s ease;
+    }
+
+    .category-item:hover {
+      border-color: #ff4757;
+      color: #ff4757;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(255, 71, 87, 0.15);
+    }
+
     /* 自适应游戏窗口控制 */
     .game-wrapper {
       position: relative;
       width: 100%;
-      height: 60vh; /* 占屏幕高度的 60% */
+      height: 60vh; 
       max-height: 650px;
       min-height: 400px;
       background: #000;
@@ -153,7 +205,7 @@
       border-radius: 8px;
       overflow: hidden;
       margin-top: 15px;
-      isolation: isolate; /* 创建独立 Stacking Context，防止外部 CSS 阻挡按钮层级 */
+      isolation: isolate; 
     }
 
     #gamemonetize-video, 
@@ -172,15 +224,44 @@
       color: #7f8c8d; 
     }
     footer a { color: #333; text-decoration: underline; }
+
+    /* 移动端自适应调优 */
+    @media (max-width: 768px) {
+      .category-bar {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      }
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
     <header>
-      <a href="/" class="logo">Y8<span>GAMES</span></a>
+      <a href="https://funnygamebox.com/" class="logo">
+        <span class="logo-icon">📦</span>
+        FUNNY <span>GAME BOX</span>
+      </a>
       <h1>Haunted House Idle</h1>
     </header>
+
+    <!-- 分类导航栏 -->
+    <nav class="category-bar">
+      <a href="/index.html" class="category-item">
+        <span>🎯</span> Trending Games
+      </a>
+      <a href="/casual.html" class="category-item">
+        <span>🎲</span> Casual
+      </a>
+      <a href="/driving.html" class="category-item">
+        <span>🚗</span> Driving
+      </a>
+      <a href="/puzzle.html" class="category-item">
+        <span>🧩</span> Puzzle
+      </a>
+      <a href="/action.html" class="category-item">
+        <span>⚔️</span> Action
+      </a>
+    </nav>
 
     <!-- 位置：自定义广告位 A（游戏上方） -->
     <div class="custom-ad-slot" id="ad-slot-top">
@@ -228,7 +309,7 @@
     </article>
 
     <footer>
-      <p>&copy; 2026 Y8Games. All rights reserved. | <a href="https://y8games.top">y8games.top</a></p>
+      <p>&copy; 2026 Funny Game Box. All rights reserved. | <a href="https://funnygamebox.com/">funnygamebox.com</a></p>
     </footer>
   </div>
 
