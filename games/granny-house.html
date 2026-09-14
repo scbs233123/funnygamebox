@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-26BKS5NW3H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-26BKS5NW3H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-26BKS5NW3H');
-</script>
+    gtag('config', 'G-26BKS5NW3H');
+  </script>
   
   <!-- 引入 jQuery（GameMonetize 视频脚本核心依赖） -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -65,7 +65,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px; 
+      margin-bottom: 15px; 
       padding-bottom: 10px;
       border-bottom: 1px solid #eaeaea;
       flex-wrap: wrap;
@@ -102,6 +102,38 @@
       font-size: 1.4rem; 
       font-weight: bold; 
       color: #333; 
+    }
+
+    /* 分类导航栏 CSS 样式 */
+    .category-bar {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .category-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #ffffff;
+      border: 1px solid #eaeaea;
+      padding: 10px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+      transition: all 0.2s ease;
+    }
+
+    .category-item:hover {
+      border-color: #ff4757;
+      color: #ff4757;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(255, 71, 87, 0.15);
     }
 
     /* 自适应游戏窗口控制 */
@@ -193,18 +225,44 @@
       color: #7f8c8d; 
     }
     footer a { color: #333; text-decoration: underline; }
+
+    /* 移动端自适应调优 */
+    @media (max-width: 768px) {
+      .category-bar {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      }
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
     <header>
-      <a href="/" class="logo">
+      <a href="https://funnygamebox.com/" class="logo">
         <span class="logo-icon">📦</span>
         FUNNY <span>GAME BOX</span>
       </a>
       <h1>Granny House</h1>
     </header>
+
+    <!-- 分类导航栏 -->
+    <nav class="category-bar">
+      <a href="/index.html" class="category-item">
+        <span>🎯</span> Trending Games
+      </a>
+      <a href="/casual.html" class="category-item">
+        <span>🎲</span> Casual
+      </a>
+      <a href="/driving.html" class="category-item">
+        <span>🚗</span> Driving
+      </a>
+      <a href="/puzzle.html" class="category-item">
+        <span>🧩</span> Puzzle
+      </a>
+      <a href="/action.html" class="category-item">
+        <span>⚔️</span> Action
+      </a>
+    </nav>
 
     <!-- 游戏上方广告位 -->
     <div class="custom-ad-slot" id="ad-slot-top">
