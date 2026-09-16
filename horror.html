@@ -110,14 +110,65 @@
       border: 1px solid #eee;
     }
     
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
     .nav-links a {
       color: #555;
       text-decoration: none;
       font-weight: 600;
-      margin-left: 15px;
       font-size: 0.95rem;
     }
     .nav-links a:hover { color: #ff4757; }
+
+    /* 📌 分享按钮样式 */
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #ff4757;
+      color: #ffffff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(255, 71, 87, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .share-btn:hover {
+      background-color: #ff6b81;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(255, 71, 87, 0.35);
+    }
+
+    /* 📌 复制成功的 Toast 弹窗样式 */
+    .toast-msg {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      z-index: 9999;
+    }
+
+    .toast-msg.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
 
     /* 📌 更新为 6 列自适应网格，适应新增的 Horror 分类 */
     .category-bar {
@@ -266,6 +317,18 @@
         <a href="/">Home</a>
         <a href="#popular">Popular</a>
         <a href="/about.html">About</a>
+
+        <!-- 📌 新增：导航栏分享按钮 -->
+        <button id="shareBtn" class="share-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+          <span>Share</span>
+        </button>
       </nav>
     </header>
 
@@ -329,6 +392,56 @@
       <p>&copy; 2026 Funny Game Box. All rights reserved. | <a href="https://funnygamebox.com/">funnygamebox.com</a></p>
     </footer>
   </div>
+
+  <!-- 📌 新增：复制成功的 Toast 弹窗容器 -->
+  <div id="toast" class="toast-msg">Link copied to clipboard!</div>
+
+  <!-- 📌 新增：分享逻辑 JavaScript 代码 -->
+  <script>
+    document.getElementById('shareBtn').addEventListener('click', async () => {
+      const shareData = {
+        title: document.title,
+        text: 'Check out these awesome free games on Funny Game Box!',
+        url: window.location.href
+      };
+
+      const showToast = (msg) => {
+        const toast = document.getElementById('toast');
+        toast.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
+      };
+
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+        } catch (err) {
+          if (err.name !== 'AbortError') console.error('Share failed:', err);
+        }
+      } else {
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(window.location.href)
+            .then(() => showToast('Link copied to clipboard!'))
+            .catch(() => showToast('Failed to copy link'));
+        } else {
+          const textArea = document.createElement('textarea');
+          textArea.value = window.location.href;
+          textArea.style.position = 'fixed';
+          textArea.style.opacity = '0';
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          try {
+            document.execCommand('copy');
+            showToast('Link copied to clipboard!');
+          } catch (err) {
+            showToast('Failed to copy link');
+          }
+          document.body.removeChild(textArea);
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
