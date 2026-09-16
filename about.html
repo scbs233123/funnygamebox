@@ -2,23 +2,36 @@
 <html lang="en">
 <head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-26BKS5NW3H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-26BKS5NW3H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-26BKS5NW3H');
-</script>
+    gtag('config', 'G-26BKS5NW3H');
+  </script>
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <!-- SEO 核心标签 -->
   <title>About Us - Funny Game Box</title>
   <meta name="description" content="Learn more about Funny Game Box. Play the best free online HTML5 browser games with no downloads required.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://funnygamebox.com/about.html">
+
+  <!-- Schema.org 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Funny Game Box",
+    "url": "https://funnygamebox.com/",
+    "logo": "https://funnygamebox.com/logo.png",
+    "email": "scbs233@gmail.com"
+  }
+  </script>
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -112,9 +125,10 @@
     }
     .nav-links a:hover { color: #ff4757; }
 
+    /* 全局统一 6 列分类栏布局 */
     .category-bar {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 12px;
       margin-bottom: 20px;
     }
@@ -150,7 +164,7 @@
       border-radius: 10px;
       border: 1px solid #eaeaea;
       margin-bottom: 25px;
-      text-align: center; /* 整体居中 */
+      text-align: center;
     }
 
     .about-card h2 {
@@ -222,10 +236,13 @@
       </nav>
     </header>
 
-    <!-- 游戏分类栏 -->
+    <!-- 补全并统一为 6 个分类项 -->
     <nav class="category-bar">
-      <a href="/" class="category-item">
+      <a href="/index.html" class="category-item">
         <span>🎯</span> Trending Games
+      </a>
+      <a href="/horror.html" class="category-item">
+        <span>👻</span> Horror
       </a>
       <a href="/casual.html" class="category-item">
         <span>🎲</span> Casual
@@ -249,7 +266,7 @@
       <ul>
         <li><strong>No Downloads Required:</strong> Play directly in your web browser with zero installation.</li>
         <li><strong>100% Free:</strong> All games are free to play on desktop, tablet, and mobile devices.</li>
-        <li><strong>Rich Categories:</strong> Enjoy a diverse collection of action, driving, puzzle, and casual games.</li>
+        <li><strong>Rich Categories:</strong> Enjoy a diverse collection of action, horror, driving, puzzle, and casual games.</li>
       </ul>
 
       <h2>Contact Us</h2>
