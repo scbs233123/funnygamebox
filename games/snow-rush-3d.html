@@ -12,20 +12,20 @@
     gtag('config', 'G-26BKS5NW3H');
   </script>
   
-  <!-- jQuery 依赖 (GameMonetize 视频脚本核心依赖) -->
+  <!-- jQuery Dependencies (Required for GameMonetize Video API) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO 核心标签（Snow Rush 3D 专属） -->
+  <!-- SEO Core Metadata -->
   <title>Play Snow Rush 3D Online - Free Unblocked Game on Funny Game Box</title>
   <meta name="description" content="Play Snow Rush 3D online for free on Funny Game Box! Race down winter slopes on your sled, dodge obstacles, collect gifts, and test your reflexes in this exciting unblocked 3D arcade game.">
   <meta name="keywords" content="funny game box, snow rush 3d, snow rush 3d unblocked, sledding games, winter games, arcade games, free online games, unblocked games, browser games">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://funnygamebox.com/games/snow-rush-3d.html">
 
-  <!-- Schema.org 结构化数据 -->
+  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,6 +34,7 @@
     "operatingSystem": "WebBrowser",
     "applicationCategory": "GameApplication",
     "genre": "Arcade / Sports",
+    "image": "https://img.gamemonetize.com/qz19c89oeh9xgil0vhin4coe5c6y8o9x/512x512.jpg",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -42,7 +43,7 @@
   }
   </script>
 
-  <!-- AdSense 广告代码脚本 -->
+  <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7325130017318424" crossorigin="anonymous"></script>
 
   <style>
@@ -76,6 +77,12 @@
       gap: 10px;
     }
 
+    .brand-zone {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     header .logo { 
       display: inline-flex;
       align-items: center;
@@ -101,13 +108,74 @@
 
     header .logo span { color: #ffa502; }
 
-    header h1 { 
-      font-size: 1.4rem; 
-      font-weight: bold; 
-      color: #333; 
+    .welcome-text {
+      font-size: 0.9rem;
+      color: #666;
+      font-weight: 500;
+      background: #ffffff;
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1px solid #eee;
     }
 
-    /* 适配 6 项分类的网格布局 */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      color: #555;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .nav-links a:hover { color: #ff4757; }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #ff4757;
+      color: #ffffff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(255, 71, 87, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .share-btn:hover {
+      background-color: #ff6b81;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(255, 71, 87, 0.35);
+    }
+
+    .toast-msg {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      z-index: 9999;
+    }
+
+    .toast-msg.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
     .category-bar {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
@@ -132,7 +200,7 @@
       transition: all 0.2s ease;
     }
 
-    .category-item:hover {
+    .category-item:hover, .category-item.active {
       border-color: #ff4757;
       color: #ff4757;
       transform: translateY(-2px);
@@ -234,29 +302,51 @@
         grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
       }
     }
+
+    @media (max-width: 600px) {
+      .welcome-text { display: none; }
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
     <header>
-      <a href="https://funnygamebox.com/" class="logo">
-        <span class="logo-icon">📦</span>
-        FUNNY <span>GAME BOX</span>
-      </a>
-      <h1>Snow Rush 3D</h1>
+      <div class="brand-zone">
+        <a href="https://funnygamebox.com/" class="logo">
+          <span class="logo-icon">📦</span>
+          FUNNY <span>GAME BOX</span>
+        </a>
+        <span class="welcome-text">🎮 Welcome to Funny Game Box! Play Best Free Browser Games Online! 🔥</span>
+      </div>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/#popular">Popular</a>
+        <a href="/about.html">About</a>
+
+        <button id="shareBtn" class="share-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+          <span>Share</span>
+        </button>
+      </nav>
     </header>
 
-    <!-- 分类导航栏 -->
+    <!-- Category Navigation -->
     <nav class="category-bar">
-      <a href="/index.html" class="category-item">
-        <span>🎯</span> Trending Games
+      <a href="https://funnygamebox.com" class="category-item">
+        <span>🎯</span> Trending
       </a>
-      <a href="/horror.html" class="category-item">
-        <span>👻</span> Horror
-      </a>
-      <a href="/casual.html" class="category-item">
+      <a href="/casual.html" class="category-item active">
         <span>🎲</span> Casual
+      </a>
+      <a href="/action.html" class="category-item">
+        <span>⚔️</span> Action
       </a>
       <a href="/driving.html" class="category-item">
         <span>🚗</span> Driving
@@ -264,12 +354,12 @@
       <a href="/puzzle.html" class="category-item">
         <span>🧩</span> Puzzle
       </a>
-      <a href="/action.html" class="category-item">
-        <span>⚔️</span> Action
+      <a href="/horror.html" class="category-item">
+        <span>👻</span> Horror
       </a>
     </nav>
 
-    <!-- 顶部广告位 -->
+    <!-- Ad Slot (Above Game) -->
     <div class="custom-ad-slot" id="ad-slot-top">
       <ins class="adsbygoogle"
            style="display:block"
@@ -280,7 +370,7 @@
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <!-- Snow Rush 3D 游戏窗口 -->
+    <!-- Game Window -->
     <div class="game-wrapper">
       <iframe src="https://html5.gamemonetize.games/qz19c89oeh9xgil0vhin4coe5c6y8o9x/" title="Snow Rush 3D" scrolling="no" allowfullscreen></iframe>
     </div>
@@ -293,7 +383,7 @@
       <p>Use <strong>A / D</strong> or the <strong>Left / Right Arrow Keys</strong> to steer your sled left and right. Press <strong>W</strong>, <strong>Up Arrow</strong>, or <strong>Spacebar</strong> to jump over obstacles. On mobile devices, tap the left or right side of the screen to steer and tap the jump button to leap.</p>
       <p>Timing and sharp reflexes are essential as speed increases downhill. Practice smooth steering, dodge obstacles early, and watch the video walkthrough below for helpful tips and high-score strategies!</p>
 
-      <!-- 视频展示模块 -->
+      <!-- Video Walkthrough Section -->
       <h2>Video Walkthrough</h2>
       <div id="gamemonetize-video-container">
         <div id="gamemonetize-video"></div>
@@ -318,6 +408,54 @@
       <p>&copy; 2026 Funny Game Box. All rights reserved. | <a href="https://funnygamebox.com/">funnygamebox.com</a></p>
     </footer>
   </div>
+
+  <div id="toast" class="toast-msg">Link copied to clipboard!</div>
+
+  <script>
+    document.getElementById('shareBtn').addEventListener('click', async () => {
+      const shareData = {
+        title: document.title,
+        text: 'Check out Snow Rush 3D on Funny Game Box!',
+        url: window.location.href
+      };
+
+      const showToast = (msg) => {
+        const toast = document.getElementById('toast');
+        toast.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
+      };
+
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+        } catch (err) {
+          if (err.name !== 'AbortError') console.error('Share failed:', err);
+        }
+      } else {
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(window.location.href)
+            .then(() => showToast('Link copied to clipboard!'))
+            .catch(() => showToast('Failed to copy link'));
+        } else {
+          const textArea = document.createElement('textarea');
+          textArea.value = window.location.href;
+          textArea.style.position = 'fixed';
+          textArea.style.opacity = '0';
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          try {
+            document.execCommand('copy');
+            showToast('Link copied to clipboard!');
+          } catch (err) {
+            showToast('Failed to copy link');
+          }
+          document.body.removeChild(textArea);
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
