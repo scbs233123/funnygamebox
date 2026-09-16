@@ -12,18 +12,8 @@
     gtag('config', 'G-26BKS5NW3H');
   </script>
   
-  <!-- 引入 jQuery（GameMonetize 视频脚本核心依赖） -->
+  <!-- jQuery 依赖 (GameMonetize 视频脚本核心依赖) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SNGPZK3CYM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-SNGPZK3CYM');
-  </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,13 +25,29 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://funnygamebox.com/games/snow-rush-3d.html">
 
+  <!-- Schema.org 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Snow Rush 3D",
+    "operatingSystem": "WebBrowser",
+    "applicationCategory": "GameApplication",
+    "genre": "Arcade / Sports",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
   <!-- AdSense 广告代码脚本 -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7325130017318424" crossorigin="anonymous"></script>
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     
-    /* 全局背景：叠加喜乐暗淡 Emoji 细条纹图案 */
     body { 
       background-color: #f7f6f1; 
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='240'%3E%3Ctext x='10' y='30' font-size='20' opacity='0.08'%3E🎮%3C/text%3E%3Ctext x='70' y='60' font-size='20' opacity='0.08'%3E😃%3C/text%3E%3Ctext x='20' y='110' font-size='20' opacity='0.08'%3E🥳%3C/text%3E%3Ctext x='80' y='140' font-size='20' opacity='0.08'%3E🎯%3C/text%3E%3Ctext x='15' y='190' font-size='20' opacity='0.08'%3E🎲%3C/text%3E%3Ctext x='75' y='220' font-size='20' opacity='0.08'%3E✨%3C/text%3E%3C/svg%3E");
@@ -52,7 +58,6 @@
       line-height: 1.5;
     }
 
-    /* 容器控制在 1000px 中等最佳宽度 */
     .container { 
       width: 90%;
       max-width: 1000px; 
@@ -60,7 +65,6 @@
       padding: 15px 0; 
     }
 
-    /* 顶部 Navbar 导航 */
     header { 
       display: flex;
       justify-content: space-between;
@@ -72,7 +76,6 @@
       gap: 10px;
     }
 
-    /* 图形化 Logo 样式 */
     header .logo { 
       display: inline-flex;
       align-items: center;
@@ -84,7 +87,6 @@
       letter-spacing: 0.5px; 
     }
 
-    /* 左侧红底圆角图标块 */
     header .logo .logo-icon {
       display: inline-flex;
       align-items: center;
@@ -105,10 +107,10 @@
       color: #333; 
     }
 
-    /* 分类导航栏 CSS 样式 */
+    /* 适配 6 项分类的网格布局 */
     .category-bar {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 12px;
       margin-bottom: 20px;
     }
@@ -137,7 +139,6 @@
       box-shadow: 0 4px 10px rgba(255, 71, 87, 0.15);
     }
 
-    /* 自适应游戏窗口控制 */
     .game-wrapper {
       position: relative;
       width: 100%;
@@ -150,6 +151,7 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       margin-bottom: 20px;
     }
+
     .game-wrapper iframe {
       position: absolute;
       top: 0;
@@ -160,7 +162,6 @@
       display: block;
     }
 
-    /* 广告占位槽 */
     .custom-ad-slot { 
       margin: 15px 0; 
       text-align: center; 
@@ -170,7 +171,6 @@
       border: 1px dashed #ddd;
     }
 
-    /* 文章与文本介绍排版 */
     .article-section { 
       max-width: 850px;
       margin: 15px auto 0 auto;
@@ -180,6 +180,7 @@
       border: 1px solid #eaeaea;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
+
     .article-section h2 { 
       font-size: 1.2rem; 
       margin-top: 20px; 
@@ -188,16 +189,17 @@
       border-bottom: 1px solid #eee;
       padding-bottom: 4px;
     }
+
     .article-section h2:first-of-type {
       margin-top: 0;
     }
+
     .article-section p { 
       font-size: 0.95rem; 
       color: #555; 
       margin-bottom: 10px; 
     }
 
-    /* 视频播放器外层独立渲染环境与触控修复 */
     #gamemonetize-video-container {
       position: relative;
       width: 100%;
@@ -227,7 +229,6 @@
     }
     footer a { color: #333; text-decoration: underline; }
 
-    /* 移动端自适应调优 */
     @media (max-width: 768px) {
       .category-bar {
         grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
@@ -239,7 +240,6 @@
 
   <div class="container">
     <header>
-      <!-- Funny Game Box Logo 结构 -->
       <a href="https://funnygamebox.com/" class="logo">
         <span class="logo-icon">📦</span>
         FUNNY <span>GAME BOX</span>
@@ -252,11 +252,9 @@
       <a href="/index.html" class="category-item">
         <span>🎯</span> Trending Games
       </a>
-
       <a href="/horror.html" class="category-item">
         <span>👻</span> Horror
       </a>
-      
       <a href="/casual.html" class="category-item">
         <span>🎲</span> Casual
       </a>
@@ -271,7 +269,7 @@
       </a>
     </nav>
 
-    <!-- 位置：自定义广告位 A（游戏上方） -->
+    <!-- 顶部广告位 -->
     <div class="custom-ad-slot" id="ad-slot-top">
       <ins class="adsbygoogle"
            style="display:block"
@@ -282,7 +280,7 @@
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <!-- 位置：Snow Rush 3D 游戏窗口 -->
+    <!-- Snow Rush 3D 游戏窗口 -->
     <div class="game-wrapper">
       <iframe src="https://html5.gamemonetize.games/qz19c89oeh9xgil0vhin4coe5c6y8o9x/" title="Snow Rush 3D" scrolling="no" allowfullscreen></iframe>
     </div>
@@ -295,7 +293,7 @@
       <p>Use <strong>A / D</strong> or the <strong>Left / Right Arrow Keys</strong> to steer your sled left and right. Press <strong>W</strong>, <strong>Up Arrow</strong>, or <strong>Spacebar</strong> to jump over obstacles. On mobile devices, tap the left or right side of the screen to steer and tap the jump button to leap.</p>
       <p>Timing and sharp reflexes are essential as speed increases downhill. Practice smooth steering, dodge obstacles early, and watch the video walkthrough below for helpful tips and high-score strategies!</p>
 
-      <!-- 视频演示完整模块 -->
+      <!-- 视频展示模块 -->
       <h2>Video Walkthrough</h2>
       <div id="gamemonetize-video-container">
         <div id="gamemonetize-video"></div>
