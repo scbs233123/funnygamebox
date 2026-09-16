@@ -2,26 +2,27 @@
 <html lang="en">
 <head>
 
-<meta name="google-site-verification" content="k3swwjtiJSJtNX0heY3O2cu8GYsd74ZqVpzMABcbWYs" />
+  <meta name="google-site-verification" content="k3swwjtiJSJtNX0heY3O2cu8GYsd74ZqVpzMABcbWYs" />
   
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-26BKS5NW3H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-26BKS5NW3H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-26BKS5NW3H');
-</script>
+    gtag('config', 'G-26BKS5NW3H');
+  </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Funny Game Box - Play Free Online Games & Unblocked Mini Games</title>
-  <meta name="description" content="Play the best free online games on Funny Game Box! Discover top unblocked driving, action, puzzle, and arcade mini games with no downloads required.">
-  <meta name="keywords" content="funny game box, online games, free browser games, unblocked games, taxi rush, driving games, mini games">
+  <!-- SEO 优化配置：精准聚焦 Puzzle 关键词 -->
+  <title>Free Online Puzzle Games - Brain Teasers & Logic Games | Funny Game Box</title>
+  <meta name="description" content="Play the best free online puzzle games on Funny Game Box! Challenge your brain with unblocked logic games, block puzzles, matching games, and mind teasers.">
+  <meta name="keywords" content="puzzle games, free puzzle games, brain games online, logic games, unblocked puzzle games, funny game box">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://funnygamebox.com/">
+  <link rel="canonical" href="https://funnygamebox.com/puzzle.html">
 
   <!-- AdSense 广告脚本 -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7325130017318424" crossorigin="anonymous"></script>
@@ -112,19 +113,70 @@
       border: 1px solid #eee;
     }
     
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
     .nav-links a {
       color: #555;
       text-decoration: none;
       font-weight: 600;
-      margin-left: 15px;
       font-size: 0.95rem;
     }
     .nav-links a:hover { color: #ff4757; }
 
-    /* 游戏分类栏样式 */
+    /* 📌 分享按钮样式 */
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #ff4757;
+      color: #ffffff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(255, 71, 87, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .share-btn:hover {
+      background-color: #ff6b81;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(255, 71, 87, 0.35);
+    }
+
+    /* 📌 复制成功的 Toast 弹窗样式 */
+    .toast-msg {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      z-index: 9999;
+    }
+
+    .toast-msg.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* 游戏分类栏样式：适配 6 列 */
     .category-bar {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 12px;
       margin-bottom: 15px;
     }
@@ -146,7 +198,7 @@
       transition: all 0.2s ease;
     }
 
-    .category-item:hover {
+    .category-item:hover, .category-item.active {
       border-color: #ff4757;
       color: #ff4757;
       transform: translateY(-2px);
@@ -166,6 +218,9 @@
       font-size: 1.4rem;
       margin: 20px 0 15px 0;
       color: #222;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .game-grid {
@@ -250,11 +305,10 @@
 <body>
 
   <div class="container">
-    <h1 class="visually-hidden">Funny Game Box - Play Free Online Unblocked Games</h1>
+    <h1 class="visually-hidden">Free Online Puzzle Games - Play Unblocked Logic & Brain Games</h1>
 
     <header>
       <div class="brand-zone">
-        <!-- 📌 匹配图 2 样式的 Logo HTML -->
         <a href="/" class="logo">
           <span class="logo-icon">📦</span>
           FUNNY <span>GAME BOX</span>
@@ -265,30 +319,40 @@
         <a href="/">Home</a>
         <a href="#popular">Popular</a>
         <a href="/about.html">About</a>
+
+        <!-- 📌 导航栏分享按钮 -->
+        <button id="shareBtn" class="share-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+          <span>Share</span>
+        </button>
       </nav>
     </header>
 
-    <!-- 游戏分类导航栏 -->
+    <!-- 游戏分类导航栏 (Puzzle 激活状态) -->
     <nav class="category-bar">
       <a href="https://funnygamebox.com" class="category-item">
-        <span>🎯</span> Trending Games
+        <span>🎯</span> Trending
       </a>
-
-  <a href="/horror.html" class="category-item">
+      <a href="/horror.html" class="category-item">
         <span>👻</span> Horror
       </a>
-      
+      <a href="/action.html" class="category-item">
+        <span>⚔️</span> Action
+      </a>
       <a href="/casual.html" class="category-item">
         <span>🎲</span> Casual
       </a>
       <a href="/driving.html" class="category-item">
         <span>🚗</span> Driving
       </a>
-      <a href="/puzzle.html" class="category-item">
+      <a href="/puzzle.html" class="category-item active">
         <span>🧩</span> Puzzle
-      </a>
-      <a href="/action.html" class="category-item">
-        <span>⚔️</span> Action
       </a>
     </nav>
 
@@ -303,24 +367,121 @@
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <!-- 游戏推荐列表 -->
-    <h2 class="section-title" id="popular">puzzle Games</h2>
+    <!-- 益智游戏推荐列表 -->
+    <h2 class="section-title" id="popular">🧩 Free Puzzle Games</h2>
     <div class="game-grid">
       
-      <!-- 这里是放游戏链接的，这里是放puzzle Games的游戏链接 -->
+      <!-- 1. Water Sort Puzzle -->
+      <a href="/games/water-sort-puzzle.html" class="game-card">
+        <img src="https://img.gamemonetize.com/9w2t9h3m02931/512x512.jpg" alt="Water Sort Puzzle Game" loading="lazy">
+        <div class="info">
+          <div class="game-title">Water Sort Puzzle</div>
+        </div>
+      </a>
+
+      <!-- 2. Block Puzzle Master -->
+      <a href="/games/block-puzzle-master.html" class="game-card">
+        <img src="https://img.gamemonetize.com/832m1x0p4a291/512x512.jpg" alt="Block Puzzle Master Game" loading="lazy">
+        <div class="info">
+          <div class="game-title">Block Puzzle Master</div>
+        </div>
+      </a>
+
+      <!-- 3. Mahjong Solitaire Classic -->
+      <a href="/games/mahjong-solitaire-classic.html" class="game-card">
+        <img src="https://img.gamemonetize.com/7291a84b01938/512x512.jpg" alt="Mahjong Solitaire Classic Game" loading="lazy">
+        <div class="info">
+          <div class="game-title">Mahjong Solitaire Classic</div>
+        </div>
+      </a>
+
+      <!-- 4. Cut the Rope 3D -->
+      <a href="/games/cut-the-rope-3d.html" class="game-card">
+        <img src="https://img.gamemonetize.com/1a92b84102937/512x512.jpg" alt="Cut the Rope 3D Game" loading="lazy">
+        <div class="info">
+          <div class="game-title">Cut the Rope 3D</div>
+        </div>
+      </a>
+
+      <!-- 5. 2048 Hexa Merge -->
+      <a href="/games/2048-hexa-merge.html" class="game-card">
+        <img src="https://img.gamemonetize.com/3910ab5193021/512x512.jpg" alt="2048 Hexa Merge Game" loading="lazy">
+        <div class="info">
+          <div class="game-title">2048 Hexa Merge</div>
+        </div>
+      </a>
+
+      <!-- 6. Unblock Ball Slide Puzzle -->
+      <a href="/games/unblock-ball-slide-puzzle.html" class="game-card">
+        <img src="https://img.gamemonetize.com/51029b9201948/512x512.jpg" alt="Unblock Ball Slide Puzzle Game" loading="lazy">
+        <div class="info">
+          <div class="game-title">Unblock Ball Slide</div>
+        </div>
+      </a>
 
     </div>
 
+    <!-- SEO 落地页介绍区 -->
     <section class="about-section" id="about">
-      <h2>About Funny Game Box</h2>
-      <p>Welcome to <strong>Funny Game Box</strong>, your ultimate destination for playing the best free online games and unblocked mini games! We offer a wide variety of HTML5 browser games including action, driving, puzzle, shooting, and 2-player games that you can play instantly on desktop, tablet, or mobile devices.</p>
-      <p>All games on Funny Game Box are 100% free with no downloads, installs, or registration required. Bookmark our site and enjoy seamless gaming anytime, anywhere!</p>
+      <h2>Best Free Online Puzzle Games</h2>
+      <p>Welcome to the <strong>Puzzle Games</strong> library on Funny Game Box! Sharpen your memory, test your problem-solving skills, and train your brain with our handpicked collection of unblocked logic and puzzle titles.</p>
+      <p>From classic matching games and block-sliding challenges to spatial reasoning and color-sorting puzzles, all games are 100% free with no downloads, installs, or registration required. Start playing directly in your browser now!</p>
     </section>
 
     <footer>
       <p>&copy; 2026 Funny Game Box. All rights reserved. | <a href="https://funnygamebox.com/">funnygamebox.com</a></p>
     </footer>
   </div>
+
+  <!-- 复制成功的 Toast 弹窗容器 -->
+  <div id="toast" class="toast-msg">Link copied to clipboard!</div>
+
+  <!-- 分享逻辑 JavaScript 代码 -->
+  <script>
+    document.getElementById('shareBtn').addEventListener('click', async () => {
+      const shareData = {
+        title: document.title,
+        text: 'Check out these awesome free games on Funny Game Box!',
+        url: window.location.href
+      };
+
+      const showToast = (msg) => {
+        const toast = document.getElementById('toast');
+        toast.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
+      };
+
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+        } catch (err) {
+          if (err.name !== 'AbortError') console.error('Share failed:', err);
+        }
+      } else {
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(window.location.href)
+            .then(() => showToast('Link copied to clipboard!'))
+            .catch(() => showToast('Failed to copy link'));
+        } else {
+          const textArea = document.createElement('textarea');
+          textArea.value = window.location.href;
+          textArea.style.position = 'fixed';
+          textArea.style.opacity = '0';
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          try {
+            document.execCommand('copy');
+            showToast('Link copied to clipboard!');
+          } catch (err) {
+            showToast('Failed to copy link');
+          }
+          document.body.removeChild(textArea);
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
