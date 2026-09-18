@@ -88,7 +88,6 @@
       letter-spacing: 0.5px; 
     }
 
-    /* 类似图2的红色圆角图标背景 */
     header .logo .logo-icon {
       display: inline-flex;
       align-items: center;
@@ -173,10 +172,10 @@
       opacity: 1;
     }
 
-    /* 游戏分类栏样式：适配 6 列 */
+    /* 📌 游戏分类栏样式：调整为 auto-fit 响应式布局 */
     .category-bar {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       gap: 12px;
       margin-bottom: 15px;
     }
@@ -334,16 +333,16 @@
       </nav>
     </header>
 
-    <!-- 游戏分类导航栏 (Puzzle 激活状态) -->
+    <!-- 游戏分类导航栏 (包含新增的 .IO Games 且 Puzzle 为激活状态) -->
     <nav class="category-bar">
       <a href="https://funnygamebox.com" class="category-item">
         <span>🎯</span> Trending
       </a>
+      <a href="/io.html" class="category-item">
+        <span>🌐</span> .IO Games
+      </a>
       <a href="/horror.html" class="category-item">
         <span>👻</span> Horror
-      </a>
-      <a href="/action.html" class="category-item">
-        <span>⚔️</span> Action
       </a>
       <a href="/casual.html" class="category-item">
         <span>🎲</span> Casual
@@ -353,6 +352,9 @@
       </a>
       <a href="/puzzle.html" class="category-item active">
         <span>🧩</span> Puzzle
+      </a>
+      <a href="/action.html" class="category-item">
+        <span>⚔️</span> Action
       </a>
     </nav>
 
@@ -371,7 +373,7 @@
     <h2 class="section-title" id="popular">🧩 Free Puzzle Games</h2>
     <div class="game-grid">
       
-      
+      <!-- 游戏卡片预留位置 -->
 
     </div>
 
