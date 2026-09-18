@@ -172,10 +172,10 @@
       opacity: 1;
     }
 
-    /* 游戏分类栏样式 */
+    /* 📌 游戏分类栏样式：调整为自适应响应列数 */
     .category-bar {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       gap: 12px;
       margin-bottom: 15px;
     }
@@ -330,10 +330,13 @@
       </nav>
     </header>
 
-    <!-- 游戏分类导航栏 -->
+    <!-- 📌 游戏分类导航栏（已加入 IO Games） -->
     <nav class="category-bar">
       <a href="/index.html" class="category-item">
         <span>🎯</span> Trending
+      </a>
+      <a href="/io.html" class="category-item">
+        <span>🌐</span> .IO Games
       </a>
       <a href="/horror.html" class="category-item">
         <span>👻</span> Horror
