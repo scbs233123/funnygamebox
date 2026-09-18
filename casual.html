@@ -172,10 +172,10 @@
       opacity: 1;
     }
 
-    /* 游戏分类栏样式 */
+    /* 📌 游戏分类栏样式：使用自适应 auto-fit 防止项数变多时排列挤压 */
     .category-bar {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       gap: 12px;
       margin-bottom: 15px;
     }
@@ -331,10 +331,14 @@
       </nav>
     </header>
 
-    <!-- 游戏分类导航栏 -->
+    <!-- 游戏分类导航栏（已包含 .IO Games） -->
     <nav class="category-bar">
       <a href="https://funnygamebox.com" class="category-item">
         <span>🎯</span> Trending Games
+      </a>
+
+      <a href="/io.html" class="category-item">
+        <span>🌐</span> .IO Games
       </a>
 
       <a href="/horror.html" class="category-item">
