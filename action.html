@@ -88,7 +88,6 @@
       letter-spacing: 0.5px; 
     }
 
-    /* 类似图2的红色圆角图标背景 */
     header .logo .logo-icon {
       display: inline-flex;
       align-items: center;
@@ -307,7 +306,6 @@
 
     <header>
       <div class="brand-zone">
-        <!-- 📌 匹配图 2 样式的 Logo HTML -->
         <a href="/" class="logo">
           <span class="logo-icon">📦</span>
           FUNNY <span>GAME BOX</span>
@@ -319,7 +317,6 @@
         <a href="#popular">Popular</a>
         <a href="/about.html">About</a>
 
-        <!-- 📌 新增：导航栏分享按钮 -->
         <button id="shareBtn" class="share-btn">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="18" cy="5" r="3"></circle>
@@ -338,11 +335,9 @@
       <a href="/index.html" class="category-item">
         <span>🎯</span> Trending
       </a>
-
       <a href="/horror.html" class="category-item">
         <span>👻</span> Horror
       </a>
-      
       <a href="/casual.html" class="category-item">
         <span>🎲</span> Casual
       </a>
@@ -369,14 +364,54 @@
     </div>
 
     <!-- 游戏推荐列表 -->
-    <h2 class="section-title" id="popular">Action Games</h2>
+    <h2 class="section-title" id="popular">Featured & Action Games</h2>
     <div class="game-grid">
       
-      <!-- 这里是放 Action Games 的游戏链接 -->
+      <!-- Samuroof -->
       <a href="/games/samuroof.html" class="game-card">
         <img src="https://img.gamemonetize.com/ssz71vvwsjg2f6r388lpevzjbkkyjsf5/512x512.jpg" alt="Play Samuroof Online">
         <div class="info">
           <p class="game-title">Samuroof</p>
+        </div>
+      </a>
+
+      <!-- Taxi Rush -->
+      <a href="/games/taxi-rush.html" class="game-card">
+        <img src="https://img.gamemonetize.com/83p14i4u37e75xkwx6bexwgg5st8px83/512x512.jpg" alt="Play Taxi Rush Online">
+        <div class="info">
+          <p class="game-title">Taxi Rush</p>
+        </div>
+      </a>
+
+      <!-- Stickman Parkour -->
+      <a href="/games/stickman-parkour.html" class="game-card">
+        <img src="https://img.gamemonetize.com/q2y3u2c1r9s201v2r6t3c1d4e5f6g7h8/512x512.jpg" alt="Play Stickman Parkour Online">
+        <div class="info">
+          <p class="game-title">Stickman Parkour</p>
+        </div>
+      </a>
+
+      <!-- Moto X3M -->
+      <a href="/games/moto-x3m.html" class="game-card">
+        <img src="https://img.gamemonetize.com/5u8p0v8i2b3n4m5k6j7h8g9f0d1s2a3q/512x512.jpg" alt="Play Moto X3M Online">
+        <div class="info">
+          <p class="game-title">Moto X3M</p>
+        </div>
+      </a>
+
+      <!-- Car Rush -->
+      <a href="/games/car-rush.html" class="game-card">
+        <img src="https://img.gamemonetize.com/1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p/512x512.jpg" alt="Play Car Rush Online">
+        <div class="info">
+          <p class="game-title">Car Rush</p>
+        </div>
+      </a>
+
+      <!-- Bubble Shooter -->
+      <a href="/games/bubble-shooter.html" class="game-card">
+        <img src="https://img.gamemonetize.com/9z8y7x6w5v4u3t2s1r0q9p8o7n6m5l4k/512x512.jpg" alt="Play Bubble Shooter Online">
+        <div class="info">
+          <p class="game-title">Bubble Shooter</p>
         </div>
       </a>
 
@@ -393,10 +428,8 @@
     </footer>
   </div>
 
-  <!-- 📌 新增：复制成功的 Toast 弹窗容器 -->
   <div id="toast" class="toast-msg">Link copied to clipboard!</div>
 
-  <!-- 📌 新增：分享逻辑 JavaScript 代码 -->
   <script>
     document.getElementById('shareBtn').addEventListener('click', async () => {
       const shareData = {
