@@ -170,10 +170,10 @@
       opacity: 1;
     }
 
-    /* 📌 更新为 6 列自适应网格，适应新增的 Horror 分类 */
+    /* 📌 游戏分类栏样式：使用 auto-fit 自适应排布，方便自由扩展分类 */
     .category-bar {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       gap: 12px;
       margin-bottom: 15px;
     }
@@ -332,25 +332,34 @@
       </nav>
     </header>
 
-    <!-- 游戏分类导航栏（包含新增的 Horror 项，并设为高亮） -->
+    <!-- 游戏分类导航栏（包含新增的 .IO Games 与 Horror 高亮显示） -->
     <nav class="category-bar">
       <a href="https://funnygamebox.com" class="category-item">
         <span>🎯</span> Trending
       </a>
+
+      <a href="/io.html" class="category-item">
+        <span>🌐</span> .IO Games
+      </a>
+
       <a href="/horror.html" class="category-item active">
         <span>👻</span> Horror
       </a>
-      <a href="/action.html" class="category-item">
-        <span>⚔️</span> Action
-      </a>
+
       <a href="/casual.html" class="category-item">
         <span>🎲</span> Casual
       </a>
+
       <a href="/driving.html" class="category-item">
         <span>🚗</span> Driving
       </a>
+
       <a href="/puzzle.html" class="category-item">
         <span>🧩</span> Puzzle
+      </a>
+
+      <a href="/action.html" class="category-item">
+        <span>⚔️</span> Action
       </a>
     </nav>
 
@@ -376,8 +385,6 @@
           <div class="game-title">Evil Granny City Terror</div>
         </div>
       </a>
-
-      <!-- 未来有新的恐怖游戏直接复制上面的 <a class="game-card"> 结构增加在下方即可 -->
 
     </div>
 
