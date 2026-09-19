@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- 引入 jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-26BKS5NW3H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SNGPZK3CYM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-26BKS5NW3H');
-</script>
-
-<meta name="google-site-verification" content="k3swwjtiJSJtNX0heY3O2cu8GYsd74ZqVpzMABcbWYs" />
-  
+    gtag('config', 'G-SNGPZK3CYM');
+  </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Funny Game Box - Play Free Online Games & Unblocked Mini Games</title>
-  <meta name="description" content="Play the best free online games on Funny Game Box! Discover top unblocked driving, action, puzzle, and arcade mini games with no downloads required.">
-  <meta name="keywords" content="funny game box, online games, free browser games, unblocked games, taxi rush, driving games, mini games">
+  <!-- SEO 核心标签 -->
+  <title>Funny Game Box - Play Free Online Games & Unblocked FPS Mini Games</title>
+  <meta name="description" content="Play the best free online games on Funny Game Box! Discover top unblocked FPS shooting games, action, driving, puzzle, and arcade mini games directly in your browser.">
+  <meta name="keywords" content="funny game box, trending games, popular online games, unblocked games, fps games unblocked, 3d shooter, counter craft, browser games">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://funnygamebox.com/">
+  <link rel="canonical" href="https://funnygamebox.net/">
 
-  <!-- AdSense 广告脚本 -->
+  <!-- AdSense 广告代码脚本 -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7325130017318424" crossorigin="anonymous"></script>
 
   <style>
@@ -37,46 +37,28 @@
       background-attachment: fixed;
       color: #333; 
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     .container { 
       width: 90%;
-      max-width: 1200px; 
+      max-width: 1000px; 
       margin: 0 auto; 
       padding: 15px 0; 
     }
 
-    /* 视障/SEO 专属 H1 隐藏样式 */
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      padding: 0;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
-    }
-
+    /* 顶部 Navbar 导航 */
     header { 
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 15px; 
-      padding-bottom: 15px;
+      padding-bottom: 10px;
       border-bottom: 1px solid #eaeaea;
       flex-wrap: wrap;
       gap: 10px;
     }
-    
-    .brand-zone {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    
-    /* 📌 图形化 Logo 样式 */
+
     header .logo { 
       display: inline-flex;
       align-items: center;
@@ -102,97 +84,27 @@
 
     header .logo span { color: #ffa502; }
 
-    .welcome-text {
-      font-size: 0.9rem;
-      color: #666;
-      font-weight: 500;
-      background: #ffffff;
-      padding: 4px 10px;
-      border-radius: 20px;
-      border: 1px solid #eee;
-    }
-    
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .nav-links a {
-      color: #555;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-    .nav-links a:hover { color: #ff4757; }
-
-    /* 📌 分享按钮样式 */
-    .share-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background-color: #ff4757;
-      color: #ffffff;
-      border: none;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.88rem;
-      font-weight: 700;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(255, 71, 87, 0.25);
-      transition: all 0.2s ease;
-    }
-
-    .share-btn:hover {
-      background-color: #ff6b81;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(255, 71, 87, 0.35);
-    }
-
-    /* 📌 复制成功的 Toast 弹窗样式 */
-    .toast-msg {
-      position: fixed;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%) translateY(100px);
-      background: rgba(0, 0, 0, 0.85);
-      color: #fff;
-      padding: 10px 22px;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-      z-index: 9999;
-    }
-
-    .toast-msg.show {
-      transform: translateX(-50%) translateY(0);
-      opacity: 1;
-    }
-
-    /* 游戏分类栏样式 */
+    /* 分类导航栏 */
     .category-bar {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 12px;
-      margin-bottom: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      margin-bottom: 20px;
     }
 
     .category-item {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 6px;
       background: #ffffff;
       border: 1px solid #eaeaea;
-      padding: 12px 10px;
+      padding: 10px;
       border-radius: 8px;
       text-decoration: none;
       color: #333;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.03);
       transition: all 0.2s ease;
     }
@@ -204,8 +116,9 @@
       box-shadow: 0 4px 10px rgba(255, 71, 87, 0.15);
     }
 
+    /* 广告位 */
     .custom-ad-slot { 
-      margin: 15px 0; 
+      margin: 15px 0 20px 0; 
       text-align: center; 
       min-height: 90px; 
       background: #ffffff;
@@ -213,58 +126,71 @@
       border: 1px dashed #ddd;
     }
 
+    /* 分类标题区 */
     .section-title {
       font-size: 1.4rem;
-      margin: 20px 0 15px 0;
-      color: #222;
-      text-transform: capitalize;
+      font-weight: 800;
+      color: #333;
+      margin: 25px 0 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    .game-grid {
+    /* 游戏网格布局 */
+    .games-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 15px;
-      margin-bottom: 25px;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 18px;
+      margin-bottom: 30px;
     }
 
+    /* 游戏卡片 */
     .game-card {
       background: #ffffff;
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
       border: 1px solid #eaeaea;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       text-decoration: none;
-      color: inherit;
+      color: #333;
       display: flex;
       flex-direction: column;
     }
+
     .game-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     }
+
     .game-card img {
       width: 100%;
-      height: 140px;
+      height: 150px;
       object-fit: cover;
       background: #eee;
     }
-    .game-card .info {
-      padding: 10px;
+
+    .game-card .game-info {
+      padding: 12px;
       text-align: center;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+
     .game-card .game-title {
       font-size: 0.95rem;
       font-weight: 700;
-      color: #333;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      margin: 0;
+      line-height: 1.3;
+      color: #2c3e50;
     }
 
     .about-section {
       background: #ffffff;
-      padding: 25px;
+      padding: 20px;
       border-radius: 12px;
       border: 1px solid #eaeaea;
       margin-top: 30px;
@@ -277,204 +203,95 @@
     .about-section p {
       font-size: 0.9rem;
       color: #666;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     footer { 
       text-align: center; 
-      padding: 30px 0; 
+      padding: 25px 0; 
       font-size: 0.85rem; 
       color: #7f8c8d; 
+      border-top: 1px solid #eaeaea;
+      margin-top: 20px;
     }
     footer a { color: #333; text-decoration: underline; }
-
-    @media (max-width: 768px) {
-      .category-bar {
-        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-      }
-    }
-
-    @media (max-width: 600px) {
-      .welcome-text { display: none; }
-    }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <h1 class="visually-hidden">Funny Game Box - Play Free Online Unblocked Games</h1>
-
     <header>
-      <div class="brand-zone">
-        <a href="/" class="logo">
-          <span class="logo-icon">📦</span>
-          FUNNY <span>GAME BOX</span>
-        </a>
-        <span class="welcome-text">🎮 Welcome to Funny Game Box! Play Best Free Browser Games Online! 🔥</span>
-      </div>
-      <nav class="nav-links">
-        <a href="/">Home</a>
-        <a href="#popular">Popular</a>
-        <a href="/about.html">About</a>
-
-        <button id="shareBtn" class="share-btn">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="18" cy="5" r="3"></circle>
-            <circle cx="6" cy="12" r="3"></circle>
-            <circle cx="18" cy="19" r="3"></circle>
-            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-          </svg>
-          <span>Share</span>
-        </button>
-      </nav>
+      <a href="/" class="logo">
+        <span class="logo-icon">📦</span>
+        FUNNY <span>GAME BOX</span>
+      </a>
     </header>
 
-    <!-- 游戏分类导航栏 -->
+    <!-- 分类导航栏 -->
     <nav class="category-bar">
-      <a href="/index.html" class="category-item">
-        <span>🎯</span> Trending
+      <a href="/trending-games.html" class="category-item">
+        <span>🔥</span> Trending
+      </a>
+      <a href="#fps-games" class="category-item">
+        <span>💥</span> FPS Games
       </a>
       <a href="/horror.html" class="category-item">
         <span>👻</span> Horror
       </a>
-      <a href="/casual.html" class="category-item">
-        <span>🎲</span> Casual
+      <a href="/action.html" class="category-item">
+        <span>⚔️</span> Action
       </a>
       <a href="/driving.html" class="category-item">
         <span>🚗</span> Driving
       </a>
-      <a href="/puzzle.html" class="category-item">
-        <span>🧩</span> Puzzle
-      </a>
-      <a href="/action.html" class="category-item">
-        <span>⚔️</span> Action
-      </a>
     </nav>
 
     <!-- 顶部广告位 -->
-    <div class="custom-ad-slot">
+    <div class="custom-ad-slot" id="ad-slot-top">
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-7325130017318424"
-           data-ad-slot="YOUR_HOMEPAGE_TOP_AD_SLOT"
+           data-ad-slot="YOUR_AD_SLOT_ID"
            data-ad-format="auto"
            data-full-width-responsive="true"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <!-- 游戏推荐列表 -->
-    <h2 class="section-title" id="popular">Featured & Action Games</h2>
-    <div class="game-grid">
-      
-      <!-- Samuroof -->
-      <a href="/games/samuroof.html" class="game-card">
-        <img src="https://img.gamemonetize.com/ssz71vvwsjg2f6r388lpevzjbkkyjsf5/512x512.jpg" alt="Play Samuroof Online">
-        <div class="info">
-          <p class="game-title">Samuroof</p>
+    <!-- 📌 FPS 游戏专区 -->
+    <h2 class="section-title" id="fps-games">💥 3D FPS Games Unblocked</h2>
+    <main class="games-grid">
+      <!-- FPS 游戏卡片 1 -->
+      <a href="/games/counter-craft.html" class="game-card">
+        <img src="https://img.gamemonetize.com/j6doy20k2ti3aa0vea8g77f14q1vibg1/512x512.jpg" alt="Counter Craft" loading="lazy">
+        <div class="game-info">
+          <h3 class="game-title">Counter Craft</h3>
         </div>
       </a>
 
-      <!-- Taxi Rush -->
-      <a href="/games/taxi-rush.html" class="game-card">
-        <img src="https://img.gamemonetize.com/83p14i4u37e75xkwx6bexwgg5st8px83/512x512.jpg" alt="Play Taxi Rush Online">
-        <div class="info">
-          <p class="game-title">Taxi Rush</p>
+      <!-- FPS 游戏卡片 2 -->
+      <a href="/games/granny-house-game.html" class="game-card">
+        <img src="https://img.gamemonetize.com/mg0x8a9pu4vghvwaxs0n94tfwakwufpg/512x512.jpg" alt="Granny House" loading="lazy">
+        <div class="game-info">
+          <h3 class="game-title">Granny House</h3>
         </div>
       </a>
+    </main>
 
-      <!-- Stickman Parkour -->
-      <a href="/games/stickman-parkour.html" class="game-card">
-        <img src="https://img.gamemonetize.com/q2y3u2c1r9s201v2r6t3c1d4e5f6g7h8/512x512.jpg" alt="Play Stickman Parkour Online">
-        <div class="info">
-          <p class="game-title">Stickman Parkour</p>
-        </div>
-      </a>
-
-      <!-- Moto X3M -->
-      <a href="/games/moto-x3m.html" class="game-card">
-        <img src="https://img.gamemonetize.com/5u8p0v8i2b3n4m5k6j7h8g9f0d1s2a3q/512x512.jpg" alt="Play Moto X3M Online">
-        <div class="info">
-          <p class="game-title">Moto X3M</p>
-        </div>
-      </a>
-
-      <!-- Car Rush -->
-      <a href="/games/car-rush.html" class="game-card">
-        <img src="https://img.gamemonetize.com/1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p/512x512.jpg" alt="Play Car Rush Online">
-        <div class="info">
-          <p class="game-title">Car Rush</p>
-        </div>
-      </a>
-
-      <!-- Bubble Shooter -->
-      <a href="/games/bubble-shooter.html" class="game-card">
-        <img src="https://img.gamemonetize.com/9z8y7x6w5v4u3t2s1r0q9p8o7n6m5l4k/512x512.jpg" alt="Play Bubble Shooter Online">
-        <div class="info">
-          <p class="game-title">Bubble Shooter</p>
-        </div>
-      </a>
-
+    <!-- 📌 Trending / 其他热门游戏专区 -->
+    <h2 class="section-title" id="trending-games">🔥 Trending Games</h2>
+    <div class="games-grid">
+      <!-- 可在此添加更多通用热门游戏卡片 -->
     </div>
 
-    <section class="about-section" id="about">
+    <section class="about-section">
       <h2>About Funny Game Box</h2>
-      <p>Welcome to <strong>Funny Game Box</strong>, your ultimate destination for playing the best free online games and unblocked mini games! We offer a wide variety of HTML5 browser games including action, driving, puzzle, shooting, and 2-player games that you can play instantly on desktop, tablet, or mobile devices.</p>
-      <p>All games on Funny Game Box are 100% free with no downloads, installs, or registration required. Bookmark our site and enjoy seamless gaming anytime, anywhere!</p>
+      <p>Welcome to <strong>Funny Game Box</strong>, your ultimate destination for free online browser games! Play top unblocked 3D FPS shooting games, action, puzzle, and driving games directly in your browser without any downloads.</p>
     </section>
 
     <footer>
-      <p>&copy; 2026 Funny Game Box. All rights reserved. | <a href="https://funnygamebox.com/">funnygamebox.com</a></p>
+      <p>&copy; 2026 Funny Game Box. All rights reserved. | <a href="https://funnygamebox.net/">funnygamebox.net</a></p>
     </footer>
   </div>
-
-  <div id="toast" class="toast-msg">Link copied to clipboard!</div>
-
-  <script>
-    document.getElementById('shareBtn').addEventListener('click', async () => {
-      const shareData = {
-        title: document.title,
-        text: 'Check out these awesome free games on Funny Game Box!',
-        url: window.location.href
-      };
-
-      const showToast = (msg) => {
-        const toast = document.getElementById('toast');
-        toast.textContent = msg;
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 2500);
-      };
-
-      if (navigator.share) {
-        try {
-          await navigator.share(shareData);
-        } catch (err) {
-          if (err.name !== 'AbortError') console.error('Share failed:', err);
-        }
-      } else {
-        if (navigator.clipboard && window.isSecureContext) {
-          navigator.clipboard.writeText(window.location.href)
-            .then(() => showToast('Link copied to clipboard!'))
-            .catch(() => showToast('Failed to copy link'));
-        } else {
-          const textArea = document.createElement('textarea');
-          textArea.value = window.location.href;
-          textArea.style.position = 'fixed';
-          textArea.style.opacity = '0';
-          document.body.appendChild(textArea);
-          textArea.focus();
-          textArea.select();
-          try {
-            document.execCommand('copy');
-            showToast('Link copied to clipboard!');
-          } catch (err) {
-            showToast('Failed to copy link');
-          }
-          document.body.removeChild(textArea);
-        }
-      }
-    });
-  </script>
 
 </body>
 </html>
