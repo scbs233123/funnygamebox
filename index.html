@@ -166,12 +166,12 @@
     }
     .nav-links a:hover { color: #ff4757; }
 
-    /* 📌 游戏分类栏样式：更新为支持点击与跳转的 <a> 链接 */
+    /* 📌 精简为 3 分类导航栏 */
     .category-bar {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 12px;
-      margin-bottom: 15px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 20px;
     }
 
     .category-item {
@@ -181,12 +181,12 @@
       gap: 8px;
       background: #ffffff;
       border: 1px solid #eaeaea;
-      padding: 12px 10px;
-      border-radius: 8px;
+      padding: 14px 10px;
+      border-radius: 10px;
       text-decoration: none;
       color: #333;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 1.05rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.03);
       transition: all 0.2s ease;
       cursor: pointer;
@@ -196,7 +196,7 @@
       border-color: #ff4757;
       color: #ff4757;
       transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(255, 71, 87, 0.15);
+      box-shadow: 0 4px 12px rgba(255, 71, 87, 0.15);
     }
 
     .custom-ad-slot { 
@@ -297,14 +297,9 @@
     }
     footer a { color: #333; text-decoration: underline; }
 
-    @media (max-width: 768px) {
-      .category-bar {
-        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-      }
-    }
-
     @media (max-width: 600px) {
       .welcome-text { display: none; }
+      .category-bar { grid-template-columns: 1fr; } /* 移动端单列显示，按钮更大易点 */
     }
   </style>
 </head>
@@ -324,19 +319,16 @@
       </div>
       <nav class="nav-links">
         <a href="/">Home</a>
-        <a href="#funny-games">Popular</a>
+        <a href="#hot-games">Popular</a>
         <a href="#about">About</a>
       </nav>
     </header>
 
-    <!-- 📌 已优化为带锚点跳转功能的 6 列分类导航栏 -->
+    <!-- 📌 3 个核心分类导航栏 -->
     <div class="category-bar">
-      <a href="#funny-games" class="category-item">🤪 Funny Games</a>
-      <a href="#ragdoll-physics" class="category-item">🧸 Ragdoll Physics</a>
-      <a href="#silly-driving" class="category-item">🚗 Silly Driving</a>
-      <a href="#troll-puzzles" class="category-item">🧩 Troll Puzzles</a>
-      <a href="#wacky-action" class="category-item">😜 Wacky Action</a>
-      <a href="#unblocked-games" class="category-item">🔥 Unblocked Games</a>
+      <a href="#hot-games" class="category-item">🔥 Hot Games</a>
+      <a href="#quirky-wacky" class="category-item">🤪 Quirky & Wacky</a>
+      <a href="#fun-puzzles" class="category-item">🧩 Fun Puzzles</a>
     </div>
 
     <!-- 顶部广告位 -->
@@ -350,8 +342,20 @@
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <!-- 🤪 1. Funny Games 区域 -->
-    <h2 class="section-title" id="funny-games">🤪 Funny Games</h2>
+    <!-- 🔥 1. 热门 (Hot Games) 区域：放好玩、刺激、高流量爆款游戏 -->
+    <h2 class="section-title" id="hot-games">🔥 Hot Games</h2>
+    <div class="game-grid">
+      <!-- 刺激好玩的赛车、动作、爆款游戏放这里 -->
+    </div>
+
+    <!-- 🤪 2. 奇趣 (Quirky & Wacky) 区域：放布娃娃物理、恶搞、搞笑类游戏 -->
+    <h2 class="section-title" id="quirky-wacky">🤪 Quirky & Wacky</h2>
+    <div class="game-grid">
+      <!-- 奇葩搞笑、物理解压类游戏放这里 -->
+    </div>
+
+    <!-- 🧩 3. 趣味 (Fun Puzzles) 区域：放整蛊解谜、益智合成、休闲类游戏 -->
+    <h2 class="section-title" id="fun-puzzles">🧩 Fun Puzzles</h2>
     <div class="game-grid">
       <!-- Arcade 2048 游戏卡片 -->
       <a href="/games/arcade-2048.html" class="game-card">
@@ -360,36 +364,6 @@
           <div class="game-title">Arcade 2048</div>
         </div>
       </a>
-    </div>
-
-    <!-- 🧸 2. Ragdoll Physics 区域 -->
-    <h2 class="section-title" id="ragdoll-physics">🧸 Ragdoll Physics</h2>
-    <div class="game-grid">
-      <!-- 后续可在此处粘贴 Ragdoll 类型的游戏卡片 -->
-    </div>
-
-    <!-- 🚗 3. Silly Driving 区域 -->
-    <h2 class="section-title" id="silly-driving">🚗 Silly Driving</h2>
-    <div class="game-grid">
-      <!-- 后续可在此处粘贴 Silly Driving 类型的游戏卡片 -->
-    </div>
-
-    <!-- 🧩 4. Troll Puzzles 区域 -->
-    <h2 class="section-title" id="troll-puzzles">🧩 Troll Puzzles</h2>
-    <div class="game-grid">
-      <!-- 后续可在此处粘贴 Troll Puzzles 类型的游戏卡片 -->
-    </div>
-
-    <!-- 😜 5. Wacky Action 区域 -->
-    <h2 class="section-title" id="wacky-action">😜 Wacky Action</h2>
-    <div class="game-grid">
-      <!-- 后续可在此处粘贴 Wacky Action 类型的游戏卡片 -->
-    </div>
-
-    <!-- 🔥 6. Unblocked Games 区域 -->
-    <h2 class="section-title" id="unblocked-games">🔥 Unblocked Games</h2>
-    <div class="game-grid">
-      <!-- 后续可在此处粘贴 Unblocked 类型的游戏卡片 -->
     </div>
 
     <!-- 📌 重构后的 GEO 结构化文本段落 (针对 AI 搜索引擎 RAG 提取) -->
