@@ -125,11 +125,11 @@
     }
     .nav-links a:hover { color: #ff4757; }
 
-    /* 全局统一 6 列分类栏布局 */
+    /* 统一的 2 分类导航栏 */
     .category-bar {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 12px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
       margin-bottom: 20px;
     }
 
@@ -140,12 +140,12 @@
       gap: 8px;
       background: #ffffff;
       border: 1px solid #eaeaea;
-      padding: 12px 10px;
-      border-radius: 8px;
+      padding: 14px 10px;
+      border-radius: 10px;
       text-decoration: none;
       color: #333;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 1.05rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.03);
       transition: all 0.2s ease;
     }
@@ -154,23 +154,24 @@
       border-color: #ff4757;
       color: #ff4757;
       transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(255, 71, 87, 0.15);
+      box-shadow: 0 4px 12px rgba(255, 71, 87, 0.15);
     }
 
     /* 居中卡片样式 */
     .about-card {
       background: #ffffff;
       padding: 40px 30px;
-      border-radius: 10px;
+      border-radius: 12px;
       border: 1px solid #eaeaea;
       margin-bottom: 25px;
       text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
 
     .about-card h2 {
       font-size: 1.3rem;
       color: #222;
-      margin: 20px 0 10px 0;
+      margin: 25px 0 12px 0;
     }
 
     .about-card h2:first-child {
@@ -184,7 +185,6 @@
       margin-bottom: 12px;
     }
 
-    /* 列表水平居中，内部文本左对齐保持阅读顺畅 */
     .about-card ul {
       display: inline-block;
       text-align: left;
@@ -194,7 +194,7 @@
     }
 
     .about-card li {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     footer { 
@@ -205,14 +205,9 @@
     }
     footer a { color: #333; text-decoration: underline; }
 
-    @media (max-width: 768px) {
-      .category-bar {
-        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-      }
-    }
-
     @media (max-width: 600px) {
       .welcome-text { display: none; }
+      .category-bar { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -227,34 +222,23 @@
           <span class="logo-icon">📦</span>
           FUNNY <span>GAME BOX</span>
         </a>
-        <span class="welcome-text">🎮 Welcome to Funny Game Box! Play Best Free Browser Games Online! 🔥</span>
+        <span class="welcome-text">🤪 Welcome to Funny Game Box! Play Best Free Funny Games Online! 🔥</span>
       </div>
       <nav class="nav-links">
         <a href="/">Home</a>
-        <a href="/#popular">Popular</a>
+        <a href="/#quirky-games">Quirky</a>
+        <a href="/#puzzle-games">Puzzles</a>
         <a href="/about.html">About</a>
       </nav>
     </header>
 
-    <!-- 补全并统一为 6 个分类项 -->
+    <!-- 保持与首页一致的双分类栏 -->
     <nav class="category-bar">
-      <a href="/index.html" class="category-item">
-        <span>🎯</span> Trending Games
+      <a href="/#quirky-games" class="category-item">
+        🤪 Quirky & Wacky
       </a>
-      <a href="/horror.html" class="category-item">
-        <span>👻</span> Horror
-      </a>
-      <a href="/casual.html" class="category-item">
-        <span>🎲</span> Casual
-      </a>
-      <a href="/driving.html" class="category-item">
-        <span>🚗</span> Driving
-      </a>
-      <a href="/puzzle.html" class="category-item">
-        <span>🧩</span> Puzzle
-      </a>
-      <a href="/action.html" class="category-item">
-        <span>⚔️</span> Action
+      <a href="/#puzzle-games" class="category-item">
+        🧩 Fun Puzzles
       </a>
     </nav>
 
@@ -265,12 +249,12 @@
       
       <ul>
         <li><strong>No Downloads Required:</strong> Play directly in your web browser with zero installation.</li>
-        <li><strong>100% Free:</strong> All games are free to play on desktop, tablet, and mobile devices.</li>
-        <li><strong>Rich Categories:</strong> Enjoy a diverse collection of action, horror, driving, puzzle, and casual games.</li>
+        <li><strong>100% Free:</strong> All games are completely free to play on desktop, tablet, and mobile devices.</li>
+        <li><strong>Curated Funny Games:</strong> Discover a handpicked collection of quirky physics platformers, hilarious ragdoll simulators, and fun brain puzzles.</li>
       </ul>
 
       <h2>Contact Us</h2>
-      <p>If you have any feedback, questions, or business inquiries, feel free to reach out to us at <strong>scbs233@gmail.com</strong>.</p>
+      <p>If you have any feedback, game suggestions, or business inquiries, feel free to reach out to us at <strong>scbs233@gmail.com</strong>.</p>
     </main>
 
     <footer>
