@@ -1,8 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-		<!--	created with www.mysitemapgenerator.com	-->
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-	<loc>https://www.funnygamebox.com/</loc>
-	<lastmod>2026-09-12T07:27:09+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 网站首页 -->
+  <url>
+    <loc>https://funnygamebox.com/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 🤪 Quirky & Wacky 分区游戏详情页 -->
+  <url>
+    <loc>https://funnygamebox.com/games/super-pixel-slime.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://funnygamebox.com/games/ski-hill-challenge.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://funnygamebox.com/games/flappy-football.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://funnygamebox.com/games/hyper-color-rush-shooter.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://funnygamebox.com/games/geometry-neon-dash-world-2.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://funnygamebox.com/games/rider-2.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://funnygamebox.com/games/bazooka-boy.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://funnygamebox.com/games/mr-fight.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://funnygamebox.com/games/stacky-hero-master.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 🧩 Fun Puzzles 分区游戏详情页 -->
+  <url>
+    <loc>https://funnygamebox.com/games/arcade-2048.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://funnygamebox.com/games/bike-obby-draw-pencil.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://funnygamebox.com/games/bear-boom-crush.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://funnygamebox.com/games/8-ball-pool-master.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://funnygamebox.com/games/red-ball-christmas-love.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://funnygamebox.com/games/save-the-dummy.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://funnygamebox.com/games/fashion-nail-salon-makeover.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://funnygamebox.com/games/magic-princess-dress-up.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
