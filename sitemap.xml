@@ -10,6 +10,12 @@
 
   <!-- 🤪 Quirky & Wacky 分区游戏详情页 -->
   <url>
+    <loc>https://funnygamebox.com/games/tom-jerry-run.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://funnygamebox.com/games/ragdoll-soccer.html</loc>
     <lastmod>2026-10-13</lastmod>
     <priority>0.8</priority>
