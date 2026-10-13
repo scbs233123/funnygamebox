@@ -387,6 +387,25 @@
               a.getElementById(c) || (a = a.createElement(b), a.id = c, a.src = "https://api.gamemonetize.com/video.js", d.parentNode.insertBefore(a, d))
           })(document, "script", "gamemonetize-video-api"); 
       </script>
+
+      <!-- 💬 Player Comments Section -->
+      <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
+        <h2>💬 Player Comments & Discussion</h2>
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = window.location.href;  
+                this.page.identifier = window.location.pathname; 
+            };
+            (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://funnygamebox.disqus.com/embed.js'; // 记得替换为你在 Disqus 注册获得的短域名 (Shortname)
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+      </div>
+
     </article>
 
     <footer>
