@@ -167,7 +167,7 @@
     }
     .nav-links a:hover { color: #ff4757; }
 
-    /* 改为 3 列分类导航栏 */
+    /* 3 列分类导航栏 */
     .category-bar {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -290,6 +290,38 @@
       margin-bottom: 6px;
     }
 
+    /* 返回顶部悬浮按钮样式 */
+    .back-to-top {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 45px;
+      height: 45px;
+      background-color: #ff4757;
+      color: #ffffff;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    .back-to-top:hover {
+      background-color: #ff6b81;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(255, 71, 87, 0.4);
+    }
+
     footer { 
       text-align: center; 
       padding: 30px 0; 
@@ -332,7 +364,7 @@
       <p>Explore the best free browser games, ragdoll physics challenges, and hilarious runner games for school & Chromebooks!</p>
     </div>
 
-    <!-- 3 分类导航栏（新增 Tom & Jerry 分类直达） -->
+    <!-- 3 分类导航栏 -->
     <div class="category-bar">
       <a href="#tom-jerry-games" class="category-item">🐱🐭 Tom & Jerry Games</a>
       <a href="#quirky-games" class="category-item">🤪 Quirky & Ragdoll</a>
@@ -353,20 +385,17 @@
     <!-- 🐱🐭 0. Tom & Jerry 专属分类专区 -->
     <h2 class="section-title" id="tom-jerry-games">🐱🐭 Tom & Jerry Unblocked Games Collection</h2>
     <div class="game-grid">
-      <!-- Tom & Jerry Run -->
       <a href="https://funnygamebox.com/games/tom-jerry-run.html" class="game-card">
         <img src="https://img.gamemonetize.com/a6d9kqfsjxbpdktw6p8j11z8bm776t8h/512x512.jpg" alt="Tom & Jerry Run Game Unblocked" loading="lazy" referrerpolicy="no-referrer">
         <div class="info">
           <div class="game-title">Tom & Jerry Run</div>
         </div>
       </a>
-      <!-- 提示：未来如果你想加更多同系列游戏，直接在这里复制并添加新的卡片即可 -->
     </div>
 
     <!-- 🤪 1. 奇趣 (Quirky & Wacky) 区域 -->
     <h2 class="section-title" id="quirky-games">🤪 Quirky & Ragdoll Physics Games</h2>
     <div class="game-grid">
-      <!-- Ragdoll Soccer -->
       <a href="https://funnygamebox.com/games/ragdoll-soccer.html" class="game-card">
         <img src="https://img.gamemonetize.com/blrxbxslxo4ohohqq7upeog1i4kejjxv/512x512.jpg" alt="Ragdoll Soccer Unblocked Game" loading="lazy" referrerpolicy="no-referrer">
         <div class="info">
@@ -374,7 +403,6 @@
         </div>
       </a>
 
-      <!-- Funny Ragdoll Wrestlers -->
       <a href="https://funnygamebox.com/games/funny-ragdoll-wrestlers.html" class="game-card">
         <img src="https://img.gamemonetize.com/jds5fxchg40of8edr3ho3qhwpo703p9x/512x512.jpg" alt="Funny Ragdoll Wrestlers Game" loading="lazy" referrerpolicy="no-referrer">
         <div class="info">
@@ -499,7 +527,7 @@
       </a>
     </div>
 
-    <!-- GEO 结构化文本段落（覆盖热门老词） -->
+    <!-- GEO 结构化文本段落 -->
     <section class="about-section" id="about">
       <h2>Play the Best Funny Games Unblocked Online for Free</h2>
       <p>Welcome to <strong>Funny Game Box</strong>, your ultimate destination for playing the best <strong>funny games unblocked</strong>, hilarious ragdoll physics games, and silly browser mini games completely free! Whether you are looking for goofy slapstick comedy, quirky simulators, or popular runner games like <strong>Tom & Jerry Run</strong> to play on your mobile phone, tablet, or Chromebook, we bring you instant-play HTML5 games with zero downloads required.</p>
@@ -523,6 +551,31 @@
       <p>&copy; 2026 Funny Game Box. All rights reserved. | <a href="https://funnygamebox.com/">funnygamebox.com</a></p>
     </footer>
   </div>
+
+  <!-- 一键回到顶部悬浮按钮 -->
+  <button id="backToTop" class="back-to-top" title="Back to top">
+    ⬆
+  </button>
+
+  <script>
+    // 控制回到顶部按钮的显隐与平滑滚动
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 
 </body>
 </html>
